@@ -29,6 +29,11 @@ module "blog_sg" {
 
   egress_rules     = ["all-all"]
   egress_cidr_blocks = ["0.0.0.0/0"]
+
+  outputs = {
+    vpc_id         = vpc_id  # Example output for vpc_id
+    public_subnets = public_subnets  # Example output for public_subnets
+  }
 }
 
 resource "aws_instance" "blog" {
